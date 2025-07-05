@@ -359,9 +359,9 @@ class FlxGameJoltRequest
 	 * @param   url  The old URL piece.
 	 * @return  The new URL piece.
 	 */
-	function sign(url:String):String
+	function sign(daUrl:String):String
 	{
-		var urlToEncode:String = url + FlxGameJolt.gameKey;
+		var urlToEncode:String = daUrl + FlxGameJolt.gameKey;
 		return '$daUrl&signature=${FlxGameJolt.usingMd5 ? haxe.crypto.Md5.encode(urlToEncode) : haxe.crypto.Sha1.encode(urlToEncode)}';
 	}
 }
